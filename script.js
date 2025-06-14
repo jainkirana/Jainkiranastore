@@ -1,25 +1,49 @@
 
+let cart = [];
+
+function addToCart(name, price) {
+    cart.push({ name, price });
+    displayCart();
+}
+
+function displayCart() {
+    const cartItems = document.getElementById("cart-items");
+    const totalEl = document.getElementById("total");
+    cartItems.innerHTML = "";
+    let total = 0;
+    cart.forEach((item, index) => {
+        total += item.price;
+        const li = document.createElement("li");
+        li.textContent = `${item.name} - ₹${item.price}`;
+        cartItems.appendChild(li);
+    });
+    totalEl.textContent = "Total: ₹" + total;
+}
+
 function checkout() {
-    var options = {
+    if (cart.length === 0) {
+        alert("Cart is empty!");
+        return;
+    }
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
+    const options = {
         "key": "rzp_test_EP4HftJ7SELH8Z",
-        "amount": "50000",
+        "amount": total * 100,
         "currency": "INR",
         "name": "Jain Kirana Store",
-        "description": "Test Transaction",
-        "image": "",
-        "handler": function (response){
-            alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
+        "description": "Grocery Purchase",
+        "handler": function (response) {
             window.location.href = "thankyou.html";
         },
         "prefill": {
-            "name": "Customer Name",
-            "email": "customer@example.com",
-            "contact": "9999999999"
+            "name": "",
+            "email": "",
+            "contact": ""
         },
         "theme": {
             "color": "#3399cc"
         }
     };
-    var rzp1 = new Razorpay(options);
-    rzp1.open();
+    const rzp = new Razorpay(options);
+    rzp.open();
 }

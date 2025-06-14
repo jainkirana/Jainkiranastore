@@ -1,35 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>धन्यवाद - Jain Kirana Store</title>
+    <title>Thank You!</title>
     <style>
-        body {
+        body {{
             font-family: Arial, sans-serif;
             text-align: center;
-            margin-top: 50px;
-        }
-        h1 {
+            padding-top: 50px;
+            background-color: #f9f9f9;
+        }}
+        h1 {{
             color: green;
-        }
-        .payment-id {
+        }}
+        p {{
             font-size: 18px;
-            color: #333;
-            margin-top: 20px;
-        }
+        }}
     </style>
 </head>
 <body>
-    <h1>🎉 धन्यवाद! आपका ऑर्डर सफल रहा।</h1>
-    <p class="payment-id" id="paymentId">आपका पेमेंट आईडी: </p>
-
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const paymentId = urlParams.get('payment_id');
-        if(paymentId){
-            document.getElementById("paymentId").innerText += paymentId;
-        }
-    </script>
+    <h1>धन्यवाद!</h1>
+    <p>आपका ऑर्डर सफलतापूर्वक किया गया है।</p>
+    <p>📍 Jain Kirana Store | 📞 8400358161</p>
 </body>
 </html>
