@@ -114,5 +114,34 @@
     </div>
 </div>
 
-</body>
+</body<button id="rzp-button1">Pay Now with Razorpay</button>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    var options = {
+        "key": "rzp_test_EP4HftJ7SELH8Z", // आपकी Razorpay Test Key
+        "amount": 50000, // पैसे पैसे में — ₹500.00 के लिए 50000 (change as per cart total)
+        "currency": "INR",
+        "name": "Jain Kirana Store",
+        "description": "Payment for Kirana Items",
+        "image": "https://your-website.com/logo.png", // (optional) shop logo
+        "handler": function (response){
+            alert("Payment ID: " + response.razorpay_payment_id);
+            // आप यहां से order success page पर redirect कर सकते हैं
+        },
+        "prefill": {
+            "name": "Customer Name",
+            "email": "customer@example.com",
+            "contact": "8400358161"
+        },
+        "theme": {
+            "color": "#3399cc"
+        }
+    };
+    var rzp1 = new Razorpay(options);
+    document.getElementById('rzp-button1').onclick = function(e){
+        rzp1.open();
+        e.preventDefault();
+    }
+</script>>
 </html>
