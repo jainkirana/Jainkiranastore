@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>Jain Kirana Store - Products</title>
+  <style>
+    body { font-family: sans-serif; background: #f8f8f8; padding: 20px; }
+    h2 { text-align: center; color: #2e7d32; }
+    .container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .card {
+      background: white;
+      padding: 15px;
+      width: 220px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .card h3 { margin: 10px 0 5px; font-size: 18px; }
+    .card p { color: green; margin: 5px 0; font-size: 16px; }
+    .card button {
+      background-color: #25D366;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+  </style>
+  <script>
+    function orderNow(product, price) {
+      var phone = "918400358161";
+      var url = `https://wa.me/${phone}?text=*🛒 New Order*%0AProduct: ${product}%0APrice: ₹${price}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</head>
+<body>
+
+  <h2>🛒 Jain Kirana Store Products</h2>
+  <div class="container">
+    <div class="card">
+      <img src="https://i.imgur.com/BZQ2rsE.jpg" alt="Makkhan Poha">
+      <h3>Makkhan Poha 900gm</h3>
+      <p>₹55</p>
+      <button onclick="orderNow('Makkhan Poha 900gm', 55)">📲 Order Now</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.imgur.com/Jbw95NP.jpg" alt="Nandi Besan">
+      <h3>Nandi Besan 500gm</h3>
+      <p>₹55</p>
+      <button onclick="orderNow('Nandi Besan 500gm', 55)">📲 Order Now</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.imgur.com/I6bR5Vi.jpg" alt="Jeera 250gm">
+      <h3>Jeera 250gm</h3>
+      <p>₹90</p>
+      <button onclick="orderNow('Jeera 250gm', 90)">📲 Order Now</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.imgur.com/I6bR5Vi.jpg" alt="Jeera 500gm">
+      <h3>Jeera 500gm</h3>
+      <p>₹175</p>
+      <button onclick="orderNow('Jeera 500gm', 175)">📲 Order Now</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.imgur.com/I6bR5Vi.jpg" alt="Jeera 1000gm">
+      <h3>Jeera 1000gm</h3>
+      <p>₹340</p>
+      <button onclick="orderNow('Jeera 1000gm', 340)">📲 Order Now</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.imgur.com/XbFYxa0.jpg" alt="Dhaniya Saboot">
+      <h3>Dhaniya Saboot (1kg)</h3>
+      <p>₹110</p>
+      <button onclick="orderNow('Dhaniya Saboot 1kg', 110)">📲 Order Now</button>
+    </div>
+  </div>
+
+</body>
+</html>
