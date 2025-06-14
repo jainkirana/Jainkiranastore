@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart - Jain Kirana Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+    h2 {
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background: white;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid #ccc;
+    }
+    .total {
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Your Cart</h2>
+  <ul id="cartItems"></ul>
+  <p class="total" id="totalPrice"></p>
+
+  <script>
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const ul = document.getElementById('cartItems');
+    let total = 0;
+
+    cartItems.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item.product + " - ₹" + item.price;
+      ul.appendChild(li);
+      total += item.price;
+    });
+
+    document.getElementById('totalPrice').textContent = "Total: ₹" + total;
+  </script>
+
+</body>
+</html>
