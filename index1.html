@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jain Kirana Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #ff9900;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 15px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+        }
+        .product-card h3 {
+            margin: 10px 0 5px;
+        }
+        .product-card p {
+            margin: 5px 0;
+        }
+        .product-card input {
+            width: 50px;
+            margin: 10px 0;
+        }
+        .btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            width: 100px;
+            border-radius: 3px;
+        }
+        .btn.buy {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<header>🛒 Jain Kirana Store</header>
+
+<div class="container">
+    <div class="product-card">
+        <h3>Makkhan Poha</h3>
+        <p>Weight: 900 gm</p>
+        <p>Price: ₹55</p>
+        <label>Qty: <input type="number" min="1" value="1"></label><br>
+        <button class="btn">Add to Cart</button>
+        <button class="btn buy">Buy Now</button>
+    </div>
+    <div class="product-card">
+        <h3>Nandi Besan</h3>
+        <p>Weight: 500 gm</p>
+        <p>Price: ₹55</p>
+        <label>Qty: <input type="number" min="1" value="1"></label><br>
+        <button class="btn">Add to Cart</button>
+        <button class="btn buy">Buy Now</button>
+    </div>
+    <div class="product-card">
+        <h3>Jeera</h3>
+        <p>Weight: 250 gm</p>
+        <p>Price: ₹90</p>
+        <label>Qty: <input type="number" min="1" value="1"></label><br>
+        <button class="btn">Add to Cart</button>
+        <button class="btn buy">Buy Now</button>
+    </div>
+    <div class="product-card">
+        <h3>Jeera</h3>
+        <p>Weight: 500 gm</p>
+        <p>Price: ₹175</p>
+        <label>Qty: <input type="number" min="1" value="1"></label><br>
+        <button class="btn">Add to Cart</button>
+        <button class="btn buy">Buy Now</button>
+    </div>
+    <div class="product-card">
+        <h3>Jeera</h3>
+        <p>Weight: 1000 gm</p>
+        <p>Price: ₹340</p>
+        <label>Qty: <input type="number" min="1" value="1"></label><br>
+        <button class="btn">Add to Cart</button>
+        <button class="btn buy">Buy Now</button>
+    </div>
+    <div class="product-card">
+        <h3>Dhaniya Saboot</h3>
+        <p>Weight: 1 kg</p>
+        <p>Price: ₹110</p>
+        <label>Qty: <input type="number" min="1" value="1"></label><br>
+        <button class="btn">Add to Cart</button>
+        <button class="btn buy">Buy Now</button>
+    </div>
+</div>
+
+</body>
+</html>
