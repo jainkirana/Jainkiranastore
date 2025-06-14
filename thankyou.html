@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>धन्यवाद - Jain Kirana Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: green;
+        }
+        .payment-id {
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 धन्यवाद! आपका ऑर्डर सफल रहा।</h1>
+    <p class="payment-id" id="paymentId">आपका पेमेंट आईडी: </p>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const paymentId = urlParams.get('payment_id');
+        if(paymentId){
+            document.getElementById("paymentId").innerText += paymentId;
+        }
+    </script>
+</body>
+</html>
